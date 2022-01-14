@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+#dare {
+  background-color: #d8465e;
+}
+
+#truth {
+  background-color: #46d88f;
+}
+
+button {
+  border-radius: 25px;
+  color: #2b2b2b;
+  cursor: pointer;
+}
