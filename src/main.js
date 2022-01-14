@@ -3,9 +3,9 @@ let truths = [];
 let dares = [];
 let baa = $.getJSON("data.json")
 
-baa.done(function (data) { });
+baa.done(data => { });
 
-baa.then(function (data) {
+baa.then(data => {
     console.log(data.truth);
     for (let i = 0; i < data.truth.length; i++) {
         truths.push(data.truth[i]);
@@ -31,12 +31,12 @@ let dares = data.dare;
 console.log(truths);
 console.log(dares);
 let index = 0;
-function truth() {
+const truth = () => {
     index = Math.floor(Math.random() * 3);
     console.log(index);
     document.getElementById("answer").innerHTML = truths[index];
 }
-function dare() {
+const dare = () => {
     index = Math.floor(Math.random() * 3);
     console.log(index);
     document.getElementById("answer").innerHTML = dares[index];
