@@ -14,30 +14,17 @@ baa.then(data => {
         dares.push(data.dare[i]);
     }
 });
-/*
-let jsonPromise = $.getJSON("url")
 
-jsonPromise.done(function(data) {
-    // success
-    // do stuff with data
-});
-
-$.getJSON("data.json", function(data){
-console.log(data.truth);
-truths = data.truth;
-let dares = data.dare;
-});
-*/
 console.log(truths);
 console.log(dares);
 let index = 0;
 const truth = () => {
-    index = Math.floor(Math.random() * 3);
+    index = Math.floor(Math.random() * truths.length);
     console.log(index);
     document.getElementById("answer").innerHTML = truths[index];
 }
 const dare = () => {
-    index = Math.floor(Math.random() * 3);
+    index = Math.floor(Math.random() * dares.length);
     console.log(index);
     document.getElementById("answer").innerHTML = dares[index];
 }
