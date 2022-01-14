@@ -1,0 +1,26 @@
+{
+  "name": "truthordrink",
+  "version": "1.0.0",
+  "description": "this is a small truth or dare game that is intended for parties and the such",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poecilonym/truthordrink.git"
+  },
+  "keywords": [],
+  "author": "poecilonym",
+  "contributors": [
+    "hofmmaxi"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poecilonym/truthordrink/issues"
+  },
+  "homepage": "https://github.com/poecilonym/truthordrink#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.13"
+  }
+}
