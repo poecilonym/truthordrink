@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> </link>
+        <title> Truth or Drink </title>
+        <meta charset="utf-8"> </meta>
+        <link rel="stylesheet" href="en.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="en.js"> </script>
+        <style>
+        .dropbtn {
+          background-color: #3498DB;
+          color: white;
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+          background-color: #2980B9;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 93px;
+          overflow: auto;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
+        </style>
+    </head>
+    <body>
+        
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a link href="de.html" rel="import">German</a>
+            <a link href="en.html" rel="import">Englisch</a>
+          </div>
+        </div>
+
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <center>
+        <br>
+        <br>
+        <div class="h1"> Truth or Drink </div>
+        
+        <div class="h2"> choose wisely </div>
+        <br>
+        <br>
+        <div class="p1"> if you deny the task or question, take a 3 shots </div>
+        <br>
+        <br>
+        <div class="ButtonTD">
+            <button style="height:200px;width:400px;font-size: 100px;" type="button" onclick="truth()" id="truth"> TRUTH </button1>
+        
+            <button style="height:200px;width:400px;font-size: 100px;" type="button" onclick="dare()" id="dare"> DARE </button>
+        </div>
+        <p id="answer"> <p>
+        </font>
+        </center>
+    </body>
+</html>
