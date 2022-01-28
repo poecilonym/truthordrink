@@ -1,7 +1,7 @@
 let foo = {};
 let truths = [];
 let dares = [];
-let baa = $.getJSON("de_data.json")
+let baa = $.getJSON(filename)
 
 baa.done(data => { });
 
