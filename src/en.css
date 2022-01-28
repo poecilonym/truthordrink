@@ -42,8 +42,19 @@
 
 .show {display: block;}
 
+div.dropdown{
+    float: right;
+}
+
+
 body {
-    background-color: #FFE6E6
+    
+    background-image: linear-gradient(to left top, #dbebff, #d9e7fe, #d8e2fd, #d8ddfb, #d9d8f9, #dfd6f6, #e4d4f2, #e9d2ed, #efd4e7, #f2d7e3, #f3dbe1, #f2dfe0);
+    
+    background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      
 }
 
 
@@ -79,6 +90,7 @@ div.p1 {
 #dare:active {
     box-shadow: #C3C3C2 0px 0px 0px;
     transform: translateY(4px);
+    background-color: #b9a1e6;
 }
 
 #truth {
@@ -98,6 +110,7 @@ div.p1 {
 #truth:active {
     box-shadow: #C3C3C2 0px 0px 0px;
     transform: translateY(4px);
+    background-color: #fbb3e1;
 }
 
 #answer {
