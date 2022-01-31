@@ -22,6 +22,14 @@
           </div>
         </div>
         
+        <div class="dropdown_games">
+          <button onclick="gameFunction()" class="dropbtn_games">Games</button>
+          <div id="myDropdown_games" class="dropdown-content_games">
+            <a link href="de.html" rel="import">German</a>
+            <a link href="en.html" rel="import">Englisch</a>
+          </div>
+        </div>
+        
 
         <script>
         /* When the user clicks on the button,
@@ -44,6 +52,29 @@
           }
         }
         </script>
+        
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function gameFunction() {
+          document.getElementById("myDropdown_games").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn_games')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content_games");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
         <center>
         <br>
         <br>

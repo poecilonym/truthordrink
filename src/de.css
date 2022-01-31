@@ -47,6 +47,49 @@ div.dropdown{
     float: right;
 }
 
+.dropbtn_games {
+  background-color: #3498DB;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn_games:hover, .dropbtn_games:focus {
+  background-color: #2980B9;
+}
+
+.dropdown_games {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content_games {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 93px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content_games a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown_games a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+div.dropdown_games{
+    float: left;
+}
+
 body {
     
     background-image: linear-gradient(to left top, #dbebff, #d9e7fe, #d8e2fd, #d8ddfb, #d9d8f9, #dfd6f6, #e4d4f2, #e9d2ed, #efd4e7, #f2d7e3, #f3dbe1, #f2dfe0);
