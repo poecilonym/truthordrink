@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> </link>
+        <title> Worlds Best Drinking Games </title>
+        <meta charset="utf-8"> </meta>
+        <link rel="stylesheet" href="en.css">
+        <script src="jquery-3.6.0.min.js"></script>
+          <script>
+            let filename = "en_data.json";
+          </script>
+        <script type="text/javascript" src="mode1.js"> </script>
+        <script type="text/javascript" src="name_mode.js"> </script>
+    </head>
+
+
+    <body>
+        
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Language</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a link href="de.html" rel="import">German</a>
+            <a link href="en.html" rel="import">Englisch</a>
+          </div>
+        </div>
+        
+        <div class="dropdown_games">
+          <button onclick="gameFunction()" class="dropbtn_games">Games</button>
+          <div id="myDropdown_games" class="dropdown-content_games">
+            <a link href="en.html" rel="import">Truth or Dare</a>
+            <a link href="kingscup_en.html" rel="import">Kings Cup</a>
+          </div>
+        </div>
+        
+
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function gameFunction() {
+          document.getElementById("myDropdown_games").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn_games')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content_games");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+        
+        <center>
+        <br>
+        <br>
+        <br>
+        <div class="h1">Truth or Drink</div>
+        <div class="h2">choose wisely</div>
+        <br>
+        <br>
+        <div class="p1">if you deny the task or question, take a 3 shots</div>
+        <br>
+        <br>
+        <button style="height:200px;width:400px;font-size: 100px;" type="button" onclick="rand_name()" id="truth"> NEXT </button>
+        <p id="name"> </p>
+        <p id="req_name"> </p>
+        <p id="answer"> </p>
+        </font>
+        </center>
+    </body>
+</html>
