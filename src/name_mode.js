@@ -1,4 +1,4 @@
-let names = [];
+//let names = [];
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
@@ -21,16 +21,20 @@ const spec_name = () => {
 }
 
 let name = "";
-let lastname = "";
+let idx = -1;
+let lastindex = -2;
 
 const rand_name = () => {
-    lastname = name
+    lastindex = idx;
     while(true) {
-        name = list[Math.floor(Math.random() * list.length)];
-        if(name != lastname || list.length <= 1) {
+       idx = Math.floor(Math.random() * list.length);
+        if(idx != lastindex || list.length <= 1) {
             break;
         }
     }
+
+    
+    name = list[idx];
     document.getElementById("name").innerHTML = name; 
     truth_or_dare = Math.floor(Math.random() * 2);
     if (truth_or_dare == 0) {
@@ -44,7 +48,20 @@ const rand_name = () => {
 }
 
 const add_name = () => {
-    let inpt_name = n;
+    let inpt_name = document.getElementById("name").value;
+    if(inpt_name=="") {
+        document.getElementById("err").innerHTML = "Please enter a name with at least one letter";
+    }
+    list.push(inpt_name);
+
+    let link = "name_mode.html";
+    link = link.concat("?", "naming", "=", "true", "&names=[\"", list[0], "\"");
+    for(let i = 1; i < list.length; i++) {
+        link = link.concat(",\"", list[i], "\"");
+    }
+    link = link.concat("]");
+    console.log(link);
+    window.location.href = link;
 }
     
 const start_game =() => {
