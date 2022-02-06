@@ -15,7 +15,6 @@
 
 
     <body>
-        
         <div class="dropdown">
           <button onclick="myFunction()" class="dropbtn">Language</button>
           <div id="myDropdown" class="dropdown-content">
@@ -88,10 +87,19 @@
         <div class="p1">if you deny the task or question, take a 3 shots</div>
         <br>
         <br>
-        <button style="height:200px;width:400px;font-size: 100px;" type="button" onclick="rand_name()" id="truth"> NEXT </button>
-        <p id="name"> </p>
-        <p id="req_name"> </p>
-        <p id="answer"> </p>
+        <h1 id="button_output">
+          <button style="height:200px;width:400px;font-size: 100px;" type="button" onclick="rand_name()" id="truth"> NEXT </button>
+          <p id="name"> </p>
+          <p id="req_name"> </p>
+          <p id="answer"> </p>
+        </h1>
+        <h1 id="addnames">
+          <input type="text" id="name" name="name" required minlength="1" placeholder="enter a name"> </input>
+          <button type="button" onclick="add_name()" id="submit"> Add name </button>
+          <button type="button" onclick="start_game()" id="start"> Start game </button>
+          <p id="err"> </p>
+        </h1>
+        <script> spec_name() </script>        
         </font>
         </center>
     </body>
