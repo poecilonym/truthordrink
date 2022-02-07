@@ -149,9 +149,9 @@ div.p1 {
   border-radius: 10px;
   cursor: pointer;
   padding: 0;
-  height:30px;
-  width:60px;
-  font-size: 10px;
+  height:70px;
+  width:200px;
+  font-size: 30px;
 }
 
 #submit:active {
@@ -166,15 +166,25 @@ div.p1 {
   border-radius: 10px;
   cursor: pointer;
   padding: 0;
-  height:30px;
-  width:60px;
-  font-size: 10px;
+  height:70px;
+  width:200px;
+  font-size: 30px;
 }
 
 #start:active {
   box-shadow: #C3C3C2 0px 0px 0px;
   transform: translateY(1px);
   background-color: #b9a1e6;
+}
+
+#name {
+  padding: 0;
+  height: 70px;
+  width: 400px; 
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
 }
 
 #answer {
