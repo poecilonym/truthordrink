@@ -2,12 +2,45 @@
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
+
+
+
 let list = urlParams.get('names');
 console.log(list);
 list = $.parseJSON(list);
 console.log(list);
 
 const naming = urlParams.get('naming');
+
+const check_url = () => {
+    const check_queryString = window.location.search;
+    const check_urlParams = new URLSearchParams(check_queryString);
+
+    let link = "name_mode.html?naming=";
+    let send_new = false;
+    let check_names = check_urlParams.get('names');
+    let check_naming = check_urlParams.get('naming');
+    if(check_naming == "") {
+        send_new = true;
+        link = link.concat("true");
+    }
+    else {
+        link = link.concat(check_naming);
+    }
+    link = link.concat("&names=");
+
+    if (check_names == "") {
+        send_new = true;
+        link = link.concat("[]");
+    }
+    else {
+        link = link.concat(check_names);
+    }
+
+    if(send_new) {        
+        window.location.href = link;
+    }
+}
 
 const spec_name = () => {
     if(naming == "true") {
