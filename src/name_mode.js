@@ -18,6 +18,17 @@ const read_values = () => {
     console.log("successfully read data from url");
 }
 
+const display_names = () => {
+    nameslist = ""
+    if(list.length > 0) {
+        nameslist = nameslist.concat(list[0]);
+    }
+    for(let i = 1; i < list.length; i++) {
+        nameslist = nameslist.concat(", ", list[i]);
+    }
+    document.getElementById("names").innerHTML = nameslist;
+}
+
 const isJSON = (a) => {
     try {
         JSON.parse(a);

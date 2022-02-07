@@ -92,6 +92,7 @@
         <div class="p1">if you deny the task or question, take a shot</div>
         <div class="p1">Names currently in the game:</div>
         <p id="names"> </p>
+        <script> display_names(); </script>
         <br>
         <br>
         <h1 id="button_output">
@@ -102,7 +103,7 @@
         </h1>
         <h1 id="addnames">
           <input type="text" id="name" name="name" required minlength="1" placeholder="enter a name"> </input>
-          <button type="button" onclick="add_name()" id="submit"> Add name </button>
+          <button type="button" onclick="add_name();display_names();" id="submit"> Add name </button>
           <button type="button" onclick="start_game()" id="start"> Start game </button>
           <p id="err"> </p>
         </h1>
