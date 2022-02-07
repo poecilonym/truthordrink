@@ -1,16 +1,32 @@
 //let names = [];
-const queryString = window.location.search;
-console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
 
+let list = "";
+let naming = "";
 
+const read_values = () => {
+    const queryString = window.location.search;
+    console.log(queryString);
+    const urlParams = new URLSearchParams(queryString);
+    
+    list = urlParams.get('names');
+    console.log(list);
+    list = $.parseJSON(list);
+    console.log(list);
 
-let list = urlParams.get('names');
-console.log(list);
-list = $.parseJSON(list);
-console.log(list);
+    naming = urlParams.get('naming');
 
-const naming = urlParams.get('naming');
+    console.log("successfully read data from url");
+}
+
+const isJSON = (a) => {
+    try {
+        JSON.parse(a);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
 
 const check_url = () => {
     console.log("checking url ...");
@@ -32,7 +48,7 @@ const check_url = () => {
     }
     link = link.concat("&names=");
 
-    if (check_names == "" || check_names == null) {
+    if (check_names == "" || check_names == null || !isJSON(check_names)) {
         send_new = true;
         link = link.concat("[]");
         console.log("fuck names");
