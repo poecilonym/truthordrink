@@ -13,6 +13,7 @@ console.log(list);
 const naming = urlParams.get('naming');
 
 const check_url = () => {
+    console.log("checking url ...");
     const check_queryString = window.location.search;
     const check_urlParams = new URLSearchParams(check_queryString);
 
@@ -20,18 +21,21 @@ const check_url = () => {
     let send_new = false;
     let check_names = check_urlParams.get('names');
     let check_naming = check_urlParams.get('naming');
-    if(check_naming == "") {
+    console.log(check_naming);
+    if(check_naming == "" || check_naming == null) {
         send_new = true;
         link = link.concat("true");
+        console.log("fuck naming");
     }
     else {
         link = link.concat(check_naming);
     }
     link = link.concat("&names=");
 
-    if (check_names == "") {
+    if (check_names == "" || check_names == null) {
         send_new = true;
         link = link.concat("[]");
+        console.log("fuck names");
     }
     else {
         link = link.concat(check_names);
