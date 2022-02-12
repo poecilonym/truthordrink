@@ -1,5 +1,6 @@
 {
-    "kingscup": [ "Hände hoch",
+    "kingscup": [
+        "Hände hoch",
         "Jungs trinken",
         "Mädchen trinken",
         "Kings Cocktail",
@@ -19,11 +20,5 @@
         "Braune Haare trinken",
         "Schwarze Haare trinken",
         "Schlauste Person trinkt"
-        
-        ]
-  }
-
-
-
-
-   
+    ]
+}
