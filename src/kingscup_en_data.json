@@ -1,5 +1,6 @@
 {
-    "kingscup": [ "Hands up",
+    "kingscup": [
+        "Hands up",
         "Boys drink",
         "Girls drink",
         "Kings Cocktail",
@@ -19,11 +20,5 @@
         "Brown hair",
         "Black hair",
         "Smartest person drinks"
-        
-        ]
-  }
-
-
-
-
-   
+    ]
+}
